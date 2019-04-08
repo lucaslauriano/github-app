@@ -12,3 +12,27 @@
   align-items: center;
   transition: all 0.2s;
 }
+
+.card-user {
+  min-width: 275px;
+  max-width: 300px;
+  margin-top: 24px;
+}
+
+.bullet {
+  display: 'inline-block';
+  margin: '0 2px';
+  transform: 'scale(0.8)';
+}
+.title {
+  font-size: 14px;
+}
+.pos {
+  margin-bottom: 12px;
+}
+
+.avatar {
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+}

@@ -31,9 +31,7 @@ export default class Main extends Component {
   prevPage = () => {};
 
   loadUsers = async (page, usersPerPage) => {
-    const response = await api.get(
-      `/users?since=${page}&per_page=${usersPerPage}`
-    );
+    const response = await api.get(`?since=${page}&per_page=${usersPerPage}`);
     const { users, _links } = response.data;
     this.setState({ users: users, links: _links, page });
   };
@@ -69,7 +67,6 @@ export default class Main extends Component {
               ))}
             </TableBody>
           </Table>
-          <AccountCircle />
           <div className="actions">
             <button onClick={this.prevPage}>Previous</button>
             <button onClick={this.nextPage}>Next</button>
