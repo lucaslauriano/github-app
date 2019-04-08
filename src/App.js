@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Routes from './routes';
 
 import './App.css';
 
@@ -9,7 +10,7 @@ const App = () => (
   <div className="App">
     <div className="App-header">
       <Header />
-      <Main />
+      <Routes />
     </div>
   </div>
 );
