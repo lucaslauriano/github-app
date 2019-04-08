@@ -91,10 +91,14 @@ export default class User extends Component {
                     {repo.name}
                   </TableCell>
                   <TableCell component="th" scope="row">
-                    <a target="_blank" href={repo.url}>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={repo.url}
+                    >
                       {repo.url}
                     </a>
-                    <button onClick={() => this.goToUrl(repo.url)}>URL</button>
+                    {/* <button onClick={() => this.goToUrl(repo.url)}>URL</button> */}
                   </TableCell>
                 </TableRow>
               ))}
