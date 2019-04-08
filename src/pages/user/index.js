@@ -38,7 +38,6 @@ export default class User extends Component {
 
   render() {
     const { details, repos } = this.state;
-    console.log(repos);
     return (
       <div className="user-list">
         <Paper>
@@ -94,7 +93,7 @@ export default class User extends Component {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={repo.url}
+                      href={repo.html_url}
                     >
                       {repo.html_url}
                     </a>
