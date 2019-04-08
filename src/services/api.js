@@ -4,7 +4,7 @@ const rest = axios.create({
   baseURL: 'https://github-node-api.herokuapp.com/api'
 });
 
-export const get = () => rest.get('/users');
+export const get = () => rest.get();
 export const getDetails = username =>
   rest.get('/users/' + username + '/details');
 export const getRepos = username => rest.get('/users/' + username + '/repos');
