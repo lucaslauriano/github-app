@@ -1,0 +1,14 @@
+.user-list article a {
+  height: 42px;
+  border-radius: 5px;
+  border: 2px solid rgb(113, 89, 193);
+  background: none;
+  color: rgb(113, 89, 193);
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}

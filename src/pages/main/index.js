@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
+import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import TablePagination from '@material-ui/core/TablePagination';
-import TableFooter from '@material-ui/core/TableFooter';
+import { AccountCircle } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
+
 import './main.css';
 
 export default class Main extends Component {
@@ -48,6 +48,7 @@ export default class Main extends Component {
               <TableRow>
                 <TableCell>User ID</TableCell>
                 <TableCell align="left">Login</TableCell>
+                <TableCell align="left">Actions</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -57,19 +58,22 @@ export default class Main extends Component {
                     {user.id}
                   </TableCell>
                   <TableCell component="th" scope="row">
-                    <Link to={`user/${user.login}`}>{user.login}</Link>
+                    {user.login}
+                  </TableCell>
+                  <TableCell component="th" scope="row">
+                    <Link to={`user/${user.login}`}>
+                      <AccountCircle className="icon" />
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
-            <TableFooter>
-              <TableRow />
-              <div className="actions">
-                <button onClick={this.prevPage}>Previous</button>
-                <button onClick={this.nextPage}>Next</button>
-              </div>
-            </TableFooter>
           </Table>
+          <AccountCircle />
+          <div className="actions">
+            <button onClick={this.prevPage}>Previous</button>
+            <button onClick={this.nextPage}>Next</button>
+          </div>
         </Paper>
       </div>
     );

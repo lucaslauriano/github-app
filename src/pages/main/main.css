@@ -55,3 +55,9 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.icon {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(113, 89, 193);
+}
