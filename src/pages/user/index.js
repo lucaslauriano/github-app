@@ -96,7 +96,7 @@ export default class User extends Component {
                       rel="noopener noreferrer"
                       href={repo.url}
                     >
-                      {repo.url}
+                      {repo.html_url}
                     </a>
                     {/* <button onClick={() => this.goToUrl(repo.url)}>URL</button> */}
                   </TableCell>
